@@ -1,3 +1,32 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6b4c7e9af57b33d654d0192c1e14da25844e5521db4d75af8a839a70ee296311
-size 896
+﻿/// <summary>
+/// Grab pass. Credits to Unity User Cician https://forum.unity.com/threads/simple-optimized-blur-shader.185327/#post-1267642
+/// </summary>
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+[ExecuteInEditMode]
+public class GrabPass : MonoBehaviour
+{
+    public float Distortion = 1.25f;
+    public Color color = new Color(1, 1, 1, 1);
+
+    // Use this for initialization
+    void Awake()
+    {
+        if (GetComponent<Image>().material != null)
+        {
+            GetComponent<Image>().material = new Material(Shader.Find("Smkgames/Menu/SimpleGrabPassBlur"));
+        }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        GetComponent<Image>().material.SetFloat("_Distortion", Distortion);
+        GetComponent<Image>().material.SetColor("_Color", color);
+
+    }
+}

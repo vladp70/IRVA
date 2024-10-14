@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:96917506786c114f26273f739b25c7950d0d0e9a30fbda09268403c5f83b827b
-size 717
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public abstract class ManomotionBase : MonoBehaviour {
+
+    [Tooltip("Insert the key gotten from the webpage here https://www.manomotion.com/my-account/licenses/")]
+    [SerializeField]
+    protected string _licenseKey;
+    protected abstract void Init(string serial_key );
+    protected abstract void SetResolutionValues(int width, int height);
+    protected abstract void SetUnityConditions();
+    protected abstract void CalculateFPSAndProcessingTime();
+    protected abstract void ProcessManomotion();
+    protected abstract void UpdateTexturesWithNewInfo();
+    protected abstract void InstantiateSession();
+
+}

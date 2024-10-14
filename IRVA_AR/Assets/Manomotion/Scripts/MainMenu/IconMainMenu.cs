@@ -1,3 +1,47 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cef89be0730c2e6a06805ae0ddb93e76b44654ccc30941d4a16a154c8d3ab5a3
-size 1158
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+/// <summary>
+/// Handles the main menu icon layout depending on the phone orientation
+/// </summary>
+public class IconMainMenu : MonoBehaviour
+{
+    public delegate void OrientationChange();
+    public static event OrientationChange OnOrientationChanged;
+    public ScreenOrientation currentOrientation;
+
+    private void Start()
+    {
+        currentOrientation = ScreenOrientation.Unknown;
+    }
+
+    void Update()
+    {
+        CheckForScreenOrientationChange();
+    }
+
+    /// <summary>
+    /// Checks for changes on the orientation of the device.
+    /// </summary>
+    void CheckForScreenOrientationChange()
+    {
+        if (currentOrientation != Screen.orientation)
+        {
+            currentOrientation = Screen.orientation;
+            OnOrientationChanged();
+        }
+    }
+
+    /// <summary>
+    /// Updates the orientation when enabled.
+    /// </summary>
+    void OnEnable()
+    {
+        if (OnOrientationChanged != null)
+        {
+            OnOrientationChanged();
+        }
+    }
+}

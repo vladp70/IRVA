@@ -1,3 +1,28 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:efea41009121fff29e2230530df584e7f4177ad1edf8a951af88fee5faf429a4
-size 604
+﻿using UnityEngine;
+using System.Collections;
+
+[ExecuteInEditMode]
+public class BWEffect : MonoBehaviour {
+
+	public float intensity;
+	private Material material;
+
+	// Creates a private material used to the effect
+	void Awake ()
+	{
+		material = new Material( Shader.Find("Hidden/BWDiffuse") );
+	}
+	
+	// Postprocess the image
+	void OnRenderImage (RenderTexture source, RenderTexture destination)
+	{
+		if (intensity == 0)
+		{
+			Graphics.Blit (source, destination);
+			return;
+		}
+
+		material.SetFloat("_bwBlend", intensity);
+		Graphics.Blit (source, destination, material);
+	}
+}

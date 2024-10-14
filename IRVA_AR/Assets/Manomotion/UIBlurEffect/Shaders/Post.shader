@@ -1,3 +1,33 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cb83eabb0e71490f0a3952b38eb9460eaa57da7fe9c7f78d739f19f4e3ff7b5d
-size 645
+﻿Shader "Hidden/BWDiffuse" {
+	Properties {
+		_MainTex ("Base (RGB)", 2D) = "white" {}
+		_bwBlend ("Black & White blend", Range (0, 1)) = 0
+	}
+	SubShader {
+
+	ZWrite Off 
+
+		Pass {
+			CGPROGRAM
+			#pragma vertex vert_img
+			#pragma fragment frag
+
+			#include "UnityCG.cginc"
+
+			uniform sampler2D _MainTex;
+			uniform float _bwBlend;
+
+			float4 frag(v2f_img i) : COLOR {
+				float4 c = tex2D(_MainTex, i.uv);
+				
+				float lum = c.r*.3 + c.g*.59 + c.b*.11;
+				float3 bw = float3( lum, lum, lum ); 
+				
+				float4 result = c;
+				result.rgb = lerp(c.rgb, bw, _bwBlend);
+				return result;
+			}
+			ENDCG
+		}
+	}
+}

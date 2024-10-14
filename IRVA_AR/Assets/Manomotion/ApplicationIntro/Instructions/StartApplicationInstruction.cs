@@ -1,3 +1,29 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a68ddac484754e8add214897528d40ae3a9fdafd65d6d397a10ea829ecb4a479
-size 811
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class StartApplicationInstruction : Instruction
+{
+
+    private void OnEnable()
+    {
+        InitializeInstruction();
+    }
+
+    void InitializeInstruction()
+    {
+        this._instructionID = 3;
+        this._instructionSeen = false;
+
+        this._currentInstructionStep = 0;
+        this._instructionSteps = 1;
+        this._instructionName = "Ready to go!";
+        this._instructionSeen = false;
+        this._cardText = "You have now seen some of the core features of the SDK PRO. But there are definately more. Feel free to further explore them";
+    }
+
+    override public void GuideHowTo()
+    {
+        ApplicationManager.Instance.howToInstructor.ConfirmInstructionSeen();
+    }
+}

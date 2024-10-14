@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a1504964e24ec73ddd761ecbd73a3feddff4303ead4f2e40b42b8d74503496bc
-size 448
+﻿using UnityEngine;
+using System.Collections;
+
+[ExecuteInEditMode]
+public class Grayscale : MonoBehaviour {
+
+	private Material material;
+
+	// Creates a private material used to the effect
+	void Awake ()
+	{
+		material = new Material( Shader.Find("Hidden/GrayScale") );
+	}
+	
+	// Postprocess the image
+	void OnRenderImage (RenderTexture source, RenderTexture destination)
+	{
+
+		Graphics.Blit (source, destination, material);
+	}
+}

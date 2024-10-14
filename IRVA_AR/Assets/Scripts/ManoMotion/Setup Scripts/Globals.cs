@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f213bd5db400f51f844df01b9c9dfaee8640d328e7b1c6f95c22129ba19d5980
-size 483
+namespace AR_ManoMotion
+{
+    public static class Globals
+    {
+        /* Enum for setting device play mode */
+        public enum DeviceMode { Desktop, AR }
+
+        /* Enum for setting AR init phases */
+        public enum ARInitPhase
+        {
+            PlaneDetection,
+            ScenePlacement,
+            SceneAdjustments,
+            Done,
+            UNDEFINED
+        }
+
+        public static DeviceMode CurrentDeviceMode = DeviceMode.AR;
+    }
+
+}

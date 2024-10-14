@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a00e8e0200cdc23b8a8ec266b075a02eb42c1d9b9e8c558889b2fce445b48fa5
-size 676
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Scripting;
+using System.Runtime.InteropServices;
+
+/// <summary>
+/// Gives information about the width of the fingers.
+/// </summary>
+[StructLayout(LayoutKind.Sequential)]
+public struct FingerInfo
+{
+    /// <summary>
+    ///The normalized left position.
+    /// </summary>
+    public Vector3 left_point;
+
+    /// <summary>
+    ///The normalized right position.
+    /// </summary>
+    public Vector3 right_point;
+
+    /// <summary>
+    /// Warning flag if finger info can´t be calculated correctly.
+    /// </summary>
+    public int fingerWarning;
+}

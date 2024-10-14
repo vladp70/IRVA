@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:83562108dd25fc805e4de4399573c91e7861c9350879c04528b20b9a9a2e80c9
-size 1044
+﻿using System.Runtime.InteropServices;
+
+/// <summary>
+/// List of available answers for the status of a ManoMotion answer.
+/// </summary>
+public enum LicenseAnswer
+{
+    LICENSE_OK = 30,
+    LICENSE_KEY_NOT_FOUND = 31,
+    LICENSE_EXPIRED = 32,
+    LICENSE_INVALID_PLAN = 33,
+    LICENSE_KEY_BLOCKED = 34,
+    LICENSE_INVALID_ACCESS_TOKEN = 35,
+    LICENSE_ACCESS_DENIED = 36,
+    LICENSE_MAX_NUM_DEVICES = 37,
+    LICENSE_UNKNOWN_SERVER_REPLY = 38,
+    LICENSE_PRODUCT_NOT_FOUND = 39,
+    LICENSE_INCORRECT_INPUT_PARAMETER = 40,
+    LICENSE_INTERNET_REQUIRED = 41,
+    LICENSE_INCORRECT_BUNDLE_ID = 42
+};
+
+/// <summary>
+/// Contains information regarding the ManoMotion licence currently in use.
+/// </summary>
+[StructLayout(LayoutKind.Sequential)]
+public struct ManoLicense
+{
+    public LicenseAnswer license_status;
+    /// The number of devices left for the license to be installed on. 
+    public int machines_left;
+    public int days_left;
+    /// The version of the SDK.
+    public float version;
+}

@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1b058a635ba29a2eda28638ceb0eb9b691286d8d6cc9b1d0cd51afd847458a67
-size 352
+
+### Module Progurad Rules starts ###
+
+## Default ##
+-keep class com.unity3d.plugin.* { *; }
+
+## AuthenticationModule ##
+-keep class com.google.android.gms.common.** { *; }
+                    -keep class com.google.android.gms.auth.** { *; }
+                    -keep class com.google.android.gms.tasks.** { *; }
+
+### Module Progurad Rules ends ###

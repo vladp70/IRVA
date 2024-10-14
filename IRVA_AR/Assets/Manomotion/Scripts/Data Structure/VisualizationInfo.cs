@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d9c24edf0332c571f176aba108555055f5f49eccaaa4ed6f8c8b6207ece0539e
-size 353
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+
+/// <summary>
+/// Used for visualization
+/// </summary>
+public struct VisualizationInfo
+{
+    /// <summary>
+    /// The Texture 2D information of the input image.
+    /// </summary>
+    public Texture2D rgb_image;
+
+    public Texture2D occlussion_rgb;
+}

@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:358a2c47b9d8e0ea7480b4653776914af5ac92fa3e8f433dc71f30dc1fa88a6a
-size 667
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Scripting;
+using System.Runtime.InteropServices;
+
+/// <summary>
+/// Information of wrist position.
+/// </summary> 
+[StructLayout(LayoutKind.Sequential)]
+public struct WristInfo
+{
+    /// <summary>
+    ///The normalized left wrist position.
+    /// </summary>
+    public Vector3 left_point;
+
+    /// <summary>
+    ///The normalized right wrist position.
+    /// </summary>
+    public Vector3 right_point;
+
+    /// <summary>
+    /// Warning flag if wrist info can´t be calculated correctly.
+    /// </summary>
+    public int wristWarning;
+}

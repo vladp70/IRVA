@@ -1,3 +1,1 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:479ac3dc905a617d868dcdfa30c525cffcf3e0deca6379d51f74c90d0f259fb6
-size 298
+{"Version":"1.45.0","IsIOSSupportEnabled":false,"AndroidAuthenticationStrategySetting":1,"AndroidCloudServicesApiKey":"","IOSAuthenticationStrategySetting":0,"IOSCloudServicesApiKey":"","CloudAnchorEnabled":true,"GeospatialEnabled":false,"GeospatialEditorEnabled":false,"SemanticsIosEnabled":false}

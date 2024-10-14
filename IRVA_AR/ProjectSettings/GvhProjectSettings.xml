@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f72a91622f2c3ecdb106406ff95ae7c1c0fa3f8e109a931e6b9523d44d4a0a1f
-size 327
+<?xml version="1.0" encoding="utf-8"?>
+<projectSettings>
+  <projectSetting name="Google.IOSResolver.VerboseLoggingEnabled" value="False" />
+  <projectSetting name="Google.PackageManagerResolver.VerboseLoggingEnabled" value="False" />
+  <projectSetting name="Google.VersionHandler.VerboseLoggingEnabled" value="False" />
+  <projectSetting name="GooglePlayServices.UseJetifier" value="True" />
+</projectSettings>

@@ -1,3 +1,25 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:95996c7dafc269e444f11dc60426a689de2c5e57fe1500b424abb0ce81ad11a3
-size 698
+fileFormatVersion: 2
+guid: 4ae4f109361d57a4d82681f852c1dc67
+timeCreated: 1517411221
+licenseType: Pro
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Montserrat Alternates
+  fontNames:
+  - Montserrat Alternates
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 327004d383ca9334f8b110d8308bb006, type: 3}
+  - {fileID: 12800000, guid: 0a9c9d7dd2e88844db61b67b5d414617, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

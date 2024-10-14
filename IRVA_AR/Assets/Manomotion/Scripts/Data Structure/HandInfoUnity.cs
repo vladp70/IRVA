@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:48d8ba99739f0da491edb7863ad75c4c1c687323bb1850a92cef56ec91f48b63
-size 338
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using System.Runtime.InteropServices;
+
+/// <summary>
+/// Contains information about the hand
+/// </summary>
+public struct HandInfoUnity {
+
+    /// <summary>
+    /// Information about the hand
+    /// </summary>
+	public HandInfo hand_info;
+
+}

@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c983661b80c73e64088c110ad3ed9a2faf6497bb4106e32ac0be21b1556a2a74
-size 378
+﻿using System;
+using UnityEngine;
+
+public struct ManoMotionFrame
+{
+	/// The width of the iamge.
+	public int width;
+	/// The height of the iamge.
+	public int height;
+	/// The 2D texture of the iamge.
+	public Texture2D texture;
+	/// The pixels of the iamge.
+	public Color32[] pixels;
+	/// The orientation of the device. 
+	public DeviceOrientation orientation;
+}
