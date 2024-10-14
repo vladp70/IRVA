@@ -1,4 +1,13 @@
-# IRVA (Introducere în Realitate Virtuală și Augmentată)
-Repository for UPB-ACS-GMRV-IRVA course.
-Contains solution for both AR and VR Unity projects.
-Support documents: https://ocw.cs.pub.ro/courses/irva
+# IRVA (Introducere în Realitate Virtuală și Augmentată) 🥽📱🎮
+
+## Prerequisites
+- Built using Unity **2022.3.49f1** - we **highly recommend** using the same version
+- Requires [Git LFS](https://git-lfs.com)
+
+## Usage
+- We **highly recommend** following our [git guide](https://ocw.cs.pub.ro/courses/irva/resurse/gitguide)
+- Download or clone repo
+- Open `IRVA_AR` or `IRVA_VR` project using **Unity Hub**
+
+## Project support
+- [OCW documentation](https://ocw.cs.pub.ro/courses/irva)
