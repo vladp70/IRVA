@@ -1,7 +1,7 @@
 using NaughtyAttributes;
 using UnityEngine;
 
-namespace ProjectSetup.CustomXRPluginProvider.Scripts
+namespace ProjectSetup.CustomXRPluginProvider.Scripts.Editor
 {
     /// <summary>
     /// Scriptable object used to persist selected TargetVR.
